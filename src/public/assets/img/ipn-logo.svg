@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" aria-label="Logo IPN">
+  <circle cx="80" cy="80" r="76" fill="#682444" stroke="#d4af37" stroke-width="4"/>
+  <circle cx="80" cy="80" r="62" fill="#ffffff" stroke="#682444" stroke-width="2"/>
+  <!-- Gear teeth (Ingeniería) -->
+  <g fill="#682444">
+    <path d="M74,22 h12 v10 h-12 z" />
+    <path d="M74,128 h12 v10 h-12 z" />
+    <path d="M22,74 h10 v12 h-10 z" />
+    <path d="M128,74 h10 v12 h-10 z" />
+    <path d="M38,40 l8,8 l-7,7 l-8,-8 z" />
+    <path d="M114,116 l8,8 l-7,7 l-8,-8 z" />
+    <path d="M40,114 l-8,8 l-7,-7 l8,-8 z" />
+    <path d="M116,38 l8,-8 l7,7 l-8,8 z" />
+  </g>
+  <circle cx="80" cy="80" r="44" fill="#682444"/>
+  <!-- Compass / Matraz / Emblem graphic -->
+  <path d="M80,48 L96,86 L80,78 L64,86 Z" fill="#ffffff"/>
+  <path d="M70,88 L90,88 L95,108 L65,108 Z" fill="#d4af37" opacity="0.9"/>
+  <!-- Letters IPN -->
+  <text x="80" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#682444" text-anchor="middle" letter-spacing="2">IPN</text>
+  <!-- Ribbon banner -->
+  <path d="M36,126 Q80,140 124,126 Q80,132 36,126 Z" fill="#d4af37"/>
+</svg>

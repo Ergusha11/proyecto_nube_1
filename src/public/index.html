@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Modelo de Infraestructura TI | ESCOM IPN</title>
+  <meta name="description" content="Formulario de evaluación de modelo de infraestructura TI para cómputo en la nube - ESCOM IPN">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado Institucional IPN / ESCOM -->
+  <header class="header-institucional">
+    <div class="header-container">
+      <a href="https://www.ipn.mx" class="logo-link" target="_blank" rel="noopener noreferrer" aria-label="Portal del Instituto Politécnico Nacional">
+        <img src="assets/img/ipn-logo.svg" alt="Escudo Institucional del IPN" class="logo-img" width="64" height="64">
+      </a>
+      <div class="header-titles">
+        <p class="header-meta">Cómputo en la nube · Unidad II · Parcial 01</p>
+        <div class="header-main-title">Instituto Politécnico Nacional</div>
+        <div class="header-sub-title">Escuela Superior de Cómputo (ESCOM)</div>
+      </div>
+      <a href="https://www.escom.ipn.mx" class="logo-link" target="_blank" rel="noopener noreferrer" aria-label="Portal de la Escuela Superior de Cómputo">
+        <img src="assets/img/escom-logo.svg" alt="Emblema de la ESCOM" class="logo-img" width="64" height="64">
+      </a>
+    </div>
+  </header>
+
+  <!-- Barra de progreso fija -->
+  <div class="progress-container" role="region" aria-label="Progreso del formulario">
+    <div class="progress-inner">
+      <span class="progress-text" id="progress-text">0 de 16 respondidas</span>
+      <div class="progress-bar-bg" aria-hidden="true">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main class="main-wrapper">
+    <div class="intro-card">
+      <h1 class="form-title">Evaluación de Modelo de Infraestructura TI</h1>
+      <aside class="privacy-notice" aria-label="Aviso de confidencialidad">
+        <span class="privacy-icon">🛡 Aviso de confidencialidad:</span>
+        Cuando envíe este formulario, no recopilará automáticamente sus detalles, como el nombre y la dirección de correo electrónico, a menos que lo proporcione usted mismo.
+      </aside>
+    </div>
+
+    <form id="cuestionario" novalidate>
+      <!-- Campo Honeypot anti-spam (oculto para humanos) -->
+      <div class="hp" aria-hidden="true">
+        <label for="hp-website">No llenar este campo:</label>
+        <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Pregunta 1 -->
+      <fieldset id="q-p1" class="question-fieldset" aria-describedby="err-p1">
+        <legend class="question-legend">
+          <span class="question-num">1.</span> ¿Cuántos empleados tiene la empresa?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p1-1">
+            <input type="radio" id="p1-1" name="p1" value="1" required>
+            <span>1-10</span>
+          </label>
+          <label class="option-label" for="p1-2">
+            <input type="radio" id="p1-2" name="p1" value="2">
+            <span>11-50</span>
+          </label>
+          <label class="option-label" for="p1-3">
+            <input type="radio" id="p1-3" name="p1" value="3">
+            <span>51-250</span>
+          </label>
+          <label class="option-label" for="p1-4">
+            <input type="radio" id="p1-4" name="p1" value="4">
+            <span>251-1000</span>
+          </label>
+          <label class="option-label" for="p1-5">
+            <input type="radio" id="p1-5" name="p1" value="5">
+            <span>Mas de 1000</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p1" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 2 -->
+      <fieldset id="q-p2" class="question-fieldset" aria-describedby="err-p2">
+        <legend class="question-legend">
+          <span class="question-num">2.</span> ¿Cuál es el presupuesto anual aproximado destinado a infraestructura de TI (MXN)?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p2-1">
+            <input type="radio" id="p2-1" name="p2" value="1" required>
+            <span>Menos de 100,000 MXN</span>
+          </label>
+          <label class="option-label" for="p2-2">
+            <input type="radio" id="p2-2" name="p2" value="2">
+            <span>100,000–500,000 MXN</span>
+          </label>
+          <label class="option-label" for="p2-3">
+            <input type="radio" id="p2-3" name="p2" value="3">
+            <span>500,001–2,000,000 MXN</span>
+          </label>
+          <label class="option-label" for="p2-4">
+            <input type="radio" id="p2-4" name="p2" value="4">
+            <span>2,000,001–10,000,000 MXN</span>
+          </label>
+          <label class="option-label" for="p2-5">
+            <input type="radio" id="p2-5" name="p2" value="5">
+            <span>Más de 10,000,000 MXN</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p2" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 3 -->
+      <fieldset id="q-p3" class="question-fieldset" aria-describedby="err-p3">
+        <legend class="question-legend">
+          <span class="question-num">3.</span> ¿Cuántas personas del área de TI tienen capacidad para administrar y mantener servidores?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p3-1">
+            <input type="radio" id="p3-1" name="p3" value="1" required>
+            <span>Ninguna</span>
+          </label>
+          <label class="option-label" for="p3-2">
+            <input type="radio" id="p3-2" name="p3" value="2">
+            <span>1-3</span>
+          </label>
+          <label class="option-label" for="p3-3">
+            <input type="radio" id="p3-3" name="p3" value="3">
+            <span>4-10</span>
+          </label>
+          <label class="option-label" for="p3-4">
+            <input type="radio" id="p3-4" name="p3" value="4">
+            <span>11-30</span>
+          </label>
+          <label class="option-label" for="p3-5">
+            <input type="radio" id="p3-5" name="p3" value="5">
+            <span>Más de 30</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p3" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 4 (Escala) -->
+      <fieldset id="q-p4" class="question-fieldset" aria-describedby="ayuda-p4 err-p4">
+        <legend class="question-legend">
+          <span class="question-num">4.</span> La información que maneja la empresa está sujeta a regulaciones estrictas (datos personales, financieros, de salud o gubernamentales)
+        </legend>
+        <div class="question-help" id="ayuda-p4">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p4-5" name="p4" value="5" required>
+            <label for="p4-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p4-4" name="p4" value="4">
+            <label for="p4-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p4-3" name="p4" value="3">
+            <label for="p4-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p4-2" name="p4" value="2">
+            <label for="p4-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p4-1" name="p4" value="1">
+            <label for="p4-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p4" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 5 (Escala) -->
+      <fieldset id="q-p5" class="question-fieldset" aria-describedby="ayuda-p5 err-p5">
+        <legend class="question-legend">
+          <span class="question-num">5.</span> Es indispensable que la infraestructura sea de uso exclusivo de la empresa, sin compartir recursos físicos con terceros.
+        </legend>
+        <div class="question-help" id="ayuda-p5">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p5-5" name="p5" value="5" required>
+            <label for="p5-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p5-4" name="p5" value="4">
+            <label for="p5-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p5-3" name="p5" value="3">
+            <label for="p5-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p5-2" name="p5" value="2">
+            <label for="p5-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p5-1" name="p5" value="1">
+            <label for="p5-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p5" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 6 -->
+      <fieldset id="q-p6" class="question-fieldset" aria-describedby="err-p6">
+        <legend class="question-legend">
+          <span class="question-num">6.</span> ¿Qué porcentaje de sus datos NO puede salir de sus instalaciones o del país por política interna o por ley?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p6-1">
+            <input type="radio" id="p6-1" name="p6" value="1" required>
+            <span>0%</span>
+          </label>
+          <label class="option-label" for="p6-2">
+            <input type="radio" id="p6-2" name="p6" value="2">
+            <span>1-25%</span>
+          </label>
+          <label class="option-label" for="p6-3">
+            <input type="radio" id="p6-3" name="p6" value="3">
+            <span>26-50%</span>
+          </label>
+          <label class="option-label" for="p6-4">
+            <input type="radio" id="p6-4" name="p6" value="4">
+            <span>51-75%</span>
+          </label>
+          <label class="option-label" for="p6-5">
+            <input type="radio" id="p6-5" name="p6" value="5">
+            <span>76-100%</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p6" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 7 -->
+      <fieldset id="q-p7" class="question-fieldset" aria-describedby="err-p7">
+        <legend class="question-legend">
+          <span class="question-num">7.</span> ¿Qué porcentaje de su carga de trabajo varía de forma impredecible (picos de demanda) durante el año?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p7-1">
+            <input type="radio" id="p7-1" name="p7" value="1" required>
+            <span>0-20</span>
+          </label>
+          <label class="option-label" for="p7-2">
+            <input type="radio" id="p7-2" name="p7" value="2">
+            <span>21–40%</span>
+          </label>
+          <label class="option-label" for="p7-3">
+            <input type="radio" id="p7-3" name="p7" value="3">
+            <span>41–60%</span>
+          </label>
+          <label class="option-label" for="p7-4">
+            <input type="radio" id="p7-4" name="p7" value="4">
+            <span>61-80%</span>
+          </label>
+          <label class="option-label" for="p7-5">
+            <input type="radio" id="p7-5" name="p7" value="5">
+            <span>81-100%</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p7" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 8 -->
+      <fieldset id="q-p8" class="question-fieldset" aria-describedby="err-p8">
+        <legend class="question-legend">
+          <span class="question-num">8.</span> ¿Cuál es la latencia máxima tolerable para sus aplicaciones críticas?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p8-1">
+            <input type="radio" id="p8-1" name="p8" value="1" required>
+            <span>Menos de 10ms</span>
+          </label>
+          <label class="option-label" for="p8-2">
+            <input type="radio" id="p8-2" name="p8" value="2">
+            <span>10-50 ms</span>
+          </label>
+          <label class="option-label" for="p8-3">
+            <input type="radio" id="p8-3" name="p8" value="3">
+            <span>51-200 ms</span>
+          </label>
+          <label class="option-label" for="p8-4">
+            <input type="radio" id="p8-4" name="p8" value="4">
+            <span>Mas de 200 ms</span>
+          </label>
+          <label class="option-label" for="p8-5">
+            <input type="radio" id="p8-5" name="p8" value="5">
+            <span>No es un factor critico</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p8" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 9 (Escala) -->
+      <fieldset id="q-p9" class="question-fieldset" aria-describedby="ayuda-p9 err-p9">
+        <legend class="question-legend">
+          <span class="question-num">9.</span> Una degradación del rendimiento causada por otros usuarios que comparten la misma infraestructura afectaría gravemente nuestra operación.
+        </legend>
+        <div class="question-help" id="ayuda-p9">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p9-5" name="p9" value="5" required>
+            <label for="p9-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p9-4" name="p9" value="4">
+            <label for="p9-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p9-3" name="p9" value="3">
+            <label for="p9-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p9-2" name="p9" value="2">
+            <label for="p9-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p9-1" name="p9" value="1">
+            <label for="p9-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p9" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 10 -->
+      <fieldset id="q-p10" class="question-fieldset" aria-describedby="err-p10">
+        <legend class="question-legend">
+          <span class="question-num">10.</span> ¿En cuánto tiempo estima que su demanda de cómputo se duplicará?
+        </legend>
+        <div class="options-list">
+          <label class="option-label" for="p10-1">
+            <input type="radio" id="p10-1" name="p10" value="1" required>
+            <span>Menos de 6 meses</span>
+          </label>
+          <label class="option-label" for="p10-2">
+            <input type="radio" id="p10-2" name="p10" value="2">
+            <span>6-12 meses</span>
+          </label>
+          <label class="option-label" for="p10-3">
+            <input type="radio" id="p10-3" name="p10" value="3">
+            <span>1-3 años</span>
+          </label>
+          <label class="option-label" for="p10-4">
+            <input type="radio" id="p10-4" name="p10" value="4">
+            <span>Mas de 3 años</span>
+          </label>
+          <label class="option-label" for="p10-5">
+            <input type="radio" id="p10-5" name="p10" value="5">
+            <span>No se espera crecimiento</span>
+          </label>
+        </div>
+        <p class="field-error" id="err-p10" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 11 (Escala) -->
+      <fieldset id="q-p11" class="question-fieldset" aria-describedby="ayuda-p11 err-p11">
+        <legend class="question-legend">
+          <span class="question-num">11.</span> La empresa prefiere pagar por consumo mensual (OPEX) antes que invertir capital en hardware propio (CAPEX).
+        </legend>
+        <div class="question-help" id="ayuda-p11">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p11-5" name="p11" value="5" required>
+            <label for="p11-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p11-4" name="p11" value="4">
+            <label for="p11-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p11-3" name="p11" value="3">
+            <label for="p11-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p11-2" name="p11" value="2">
+            <label for="p11-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p11-1" name="p11" value="1">
+            <label for="p11-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p11" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 12 (Escala) -->
+      <fieldset id="q-p12" class="question-fieldset" aria-describedby="ayuda-p12 err-p12">
+        <legend class="question-legend">
+          <span class="question-num">12.</span> La empresa está dispuesta a asumir los costos de mantenimiento, actualización y personal necesarios para operar su propia infraestructura.
+        </legend>
+        <div class="question-help" id="ayuda-p12">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p12-5" name="p12" value="5" required>
+            <label for="p12-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p12-4" name="p12" value="4">
+            <label for="p12-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p12-3" name="p12" value="3">
+            <label for="p12-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p12-2" name="p12" value="2">
+            <label for="p12-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p12-1" name="p12" value="1">
+            <label for="p12-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p12" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 13 (Escala) -->
+      <fieldset id="q-p13" class="question-fieldset" aria-describedby="ayuda-p13 err-p13">
+        <legend class="question-legend">
+          <span class="question-num">13.</span> La rapidez para desplegar nuevos servicios es más importante que tener control total sobre la infraestructura.
+        </legend>
+        <div class="question-help" id="ayuda-p13">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p13-5" name="p13" value="5" required>
+            <label for="p13-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p13-4" name="p13" value="4">
+            <label for="p13-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p13-3" name="p13" value="3">
+            <label for="p13-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p13-2" name="p13" value="2">
+            <label for="p13-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p13-1" name="p13" value="1">
+            <label for="p13-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p13" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 14 (Escala) -->
+      <fieldset id="q-p14" class="question-fieldset" aria-describedby="ayuda-p14 err-p14">
+        <legend class="question-legend">
+          <span class="question-num">14.</span> La empresa ya cuenta con un centro de datos o infraestructura propia en operación que desea seguir aprovechando.
+        </legend>
+        <div class="question-help" id="ayuda-p14">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p14-5" name="p14" value="5" required>
+            <label for="p14-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p14-4" name="p14" value="4">
+            <label for="p14-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p14-3" name="p14" value="3">
+            <label for="p14-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p14-2" name="p14" value="2">
+            <label for="p14-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p14-1" name="p14" value="1">
+            <label for="p14-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p14" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 15 (Escala) -->
+      <fieldset id="q-p15" class="question-fieldset" aria-describedby="ayuda-p15 err-p15">
+        <legend class="question-legend">
+          <span class="question-num">15.</span> La empresa comparte proyectos, normativas o requisitos de seguridad con otras organizaciones del mismo sector con las que podría compartir una infraestructura común.
+        </legend>
+        <div class="question-help" id="ayuda-p15">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p15-5" name="p15" value="5" required>
+            <label for="p15-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p15-4" name="p15" value="4">
+            <label for="p15-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p15-3" name="p15" value="3">
+            <label for="p15-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p15-2" name="p15" value="2">
+            <label for="p15-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p15-1" name="p15" value="1">
+            <label for="p15-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p15" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Pregunta 16 (Escala) -->
+      <fieldset id="q-p16" class="question-fieldset" aria-describedby="ayuda-p16 err-p16">
+        <legend class="question-legend">
+          <span class="question-num">16.</span> La empresa necesita mover datos y aplicaciones entre su infraestructura interna y servicios externos según la carga de trabajo.
+        </legend>
+        <div class="question-help" id="ayuda-p16">
+          1 estrella: Totalmente en desacuerdo · 5 estrellas : Totalmente de acuerdo
+        </div>
+        <div class="scale-wrapper">
+          <div class="star-rating" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="p16-5" name="p16" value="5" required>
+            <label for="p16-5" title="5 estrellas"><span aria-hidden="true">★</span><span class="sr-only">5 estrellas</span></label>
+            <input type="radio" id="p16-4" name="p16" value="4">
+            <label for="p16-4" title="4 estrellas"><span aria-hidden="true">★</span><span class="sr-only">4 estrellas</span></label>
+            <input type="radio" id="p16-3" name="p16" value="3">
+            <label for="p16-3" title="3 estrellas"><span aria-hidden="true">★</span><span class="sr-only">3 estrellas</span></label>
+            <input type="radio" id="p16-2" name="p16" value="2">
+            <label for="p16-2" title="2 estrellas"><span aria-hidden="true">★</span><span class="sr-only">2 estrellas</span></label>
+            <input type="radio" id="p16-1" name="p16" value="1">
+            <label for="p16-1" title="1 estrella"><span aria-hidden="true">★</span><span class="sr-only">1 estrella</span></label>
+          </div>
+          <div class="scale-legend-labels" aria-hidden="true">
+            <span>1 (En desacuerdo)</span>
+            <span>5 (De acuerdo)</span>
+          </div>
+        </div>
+        <p class="field-error" id="err-p16" aria-live="polite"></p>
+      </fieldset>
+
+      <!-- Resumen de Errores para navegación rápida -->
+      <div id="error-summary" class="error-summary-box" role="alert" aria-live="assertive"></div>
+
+      <!-- Sección de Envío -->
+      <div class="submit-section">
+        <button type="submit" id="btn-submit" class="btn-submit">
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span>Enviar Evaluación</span>
+        </button>
+        <div id="general-status" class="general-status-msg" role="status" aria-live="polite"></div>
+      </div>
+    </form>
+  </main>
+
+  <!-- Pie de Página Institucional -->
+  <footer class="footer-institucional">
+    <div class="footer-container">
+      <p class="footer-inst">Instituto Politécnico Nacional – Escuela Superior de Cómputo</p>
+      <p class="footer-copy">Cómputo en la nube · Proyecto Parcial 01 · Actividad sumativa 04</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/form.js"></script>
+</body>
+</html>
